@@ -6,7 +6,6 @@
   "scripts": {
     "preversion": "git pull && rm -rf ./node_modules/ && npm install && npm test",
     "postversion": "git push && npm publish --access=public && git push --tags",
-
     "eslint": "eslint --ignore-path .npmignore **/*.js",
     "jest": "jest test --notify --config=jestrc.json",
     "test": "npm run eslint && npm run jest"
