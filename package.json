@@ -1,0 +1,30 @@
+{
+  "name": "eslint-config-luanmuniz",
+  "version": "0.1.0",
+  "description": "Just the eslint configuration for all the startup boilerplate projects",
+  "main": "index.js",
+  "scripts": {
+    "preversion": "git pull && rm -rf ./node_modules/ && npm install && npm test",
+    "postversion": "git push && npm publish --access=public && git push --tags",
+
+    "eslint": "eslint --ignore-path .npmignore **/*.js",
+    "jest": "jest test --notify --config=jestrc.json",
+    "test": "npm run eslint && npm run jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luanmuniz/eslint-nodejs.git"
+  },
+  "author": "Luan Muniz <luan@luanmuniz.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luanmuniz/eslint-nodejs/issues"
+  },
+  "homepage": "https://github.com/luanmuniz/eslint-nodejs#readme",
+  "devDependencies": {
+    "eslint": "4.19.1",
+    "eslint-plugin-jest": "21.17.0",
+    "jest": "23.1.0",
+    "jest-extended": "0.7.2"
+  }
+}
