@@ -20,7 +20,7 @@ official ESLint website.
 To use the JavaScript Standard Style shareable config, first run this:
 
 ```bash
-npm install --save-dev eslint-config-luanmuniz
+npm install --save-dev eslint-config-luanmuniz eslint-plugin-jest 
 ```
 
 Then, add this to your .eslintrc file:
