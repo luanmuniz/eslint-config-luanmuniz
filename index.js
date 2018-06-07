@@ -68,7 +68,7 @@ module.exports = {
 		'complexity': [ 'error', { max: 2 }],
 		'curly': 'error',
 		'default-case': 'error',
-		'dot-location': [ 'error', 'object' ],
+		'dot-location': [ 'error', 'property' ],
 		'dot-notation': 'error',
 		'eqeqeq': 'error',
 		'no-alert': 'error',
