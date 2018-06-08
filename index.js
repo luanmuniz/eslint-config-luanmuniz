@@ -6,7 +6,9 @@ module.exports = {
 		serviceworker: true,
 		webextensions: true
 	},
-	globals: { },
+	globals: {
+		Promise: true
+	},
 	parserOptions: {
 		ecmaFeatures: {
 			impliedStrict: true,
@@ -126,7 +128,7 @@ module.exports = {
 		'require-await': 'error',
 		'wrap-iife': [ 'error', 'inside' ],
 		'yoda': 'error',
-		'init-declarations': [ 'error', 'never' ], // eslint-disable-line sort-keys
+		'init-declarations': [ 'error', 'always' ], // eslint-disable-line sort-keys
 		'no-catch-shadow': 'error',
 		'no-delete-var': 'error',
 		'no-label-var': 'error',
