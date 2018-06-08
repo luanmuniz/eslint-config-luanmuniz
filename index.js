@@ -67,7 +67,6 @@ module.exports = {
 
 		'array-callback-return': 'error', // eslint-disable-line sort-keys
 		'block-scoped-var': 'error',
-		'complexity': [ 'error', { max: 2 }],
 		'curly': 'error',
 		'default-case': 'error',
 		'dot-location': [ 'error', 'property' ],
