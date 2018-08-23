@@ -220,7 +220,11 @@ module.exports = {
 			var: 'always'
 		}],
 		'operator-linebreak': [ 'error', 'none' ],
-		'padded-blocks': [ 'error', 'never' ],
+		'padded-blocks': [ 'error', {
+			'blocks': 'never',
+			'classes': 'always',
+			'switches': 'never'
+		}],
 		'quotes': [ 'error', 'single', {
 			allowTemplateLiterals: true,
 			avoidEscape: true
