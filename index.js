@@ -31,9 +31,9 @@ module.exports = {
 		'jest/prefer-to-have-length': 'error',
 		'jest/valid-expect': 'error',
 
-		'no-magic-numbers': [ 'error', { 'ignore': [ -1, 0, 1, 2, 3, 4, 5, 7, 10, 24, 60, 100, 365, 1000, 1024 ] }],
+		'no-magic-numbers': [ 'error', { 'ignore': [ -1, 0, 1, 2, 3, 4, 5, 7, 10, 24, 60, 100, 200, 365, 400, 404, 1000, 1024 ] }],
 
-		'for-direction': 'error', // eslint-disable-line sort-keys
+		'for-direction': 'error',
 		'no-compare-neg-zero': 'error',
 		'no-cond-assign': 'error',
 		'no-console': 'error',
@@ -65,7 +65,7 @@ module.exports = {
 		'valid-jsdoc': [ 'error', { requireReturn: false }],
 		'valid-typeof': 'error',
 
-		'array-callback-return': 'error', // eslint-disable-line sort-keys
+		'array-callback-return': 'error',
 		'block-scoped-var': 'error',
 		'curly': 'error',
 		'default-case': 'error',
@@ -91,7 +91,7 @@ module.exports = {
 		}],
 		'no-implicit-globals': 'error',
 		'no-implied-eval': 'error',
-		'guard-for-in': 'error', // eslint-disable-line sort-keys
+		'guard-for-in': 'error',
 		'no-invalid-this': 'error',
 		'no-iterator': 'error',
 		'no-labels': 'error',
@@ -127,7 +127,7 @@ module.exports = {
 		'require-await': 'error',
 		'wrap-iife': [ 'error', 'inside' ],
 		'yoda': 'error',
-		'init-declarations': [ 'error', 'always' ], // eslint-disable-line sort-keys
+		'init-declarations': [ 'error', 'always' ],
 		'no-catch-shadow': 'error',
 		'no-delete-var': 'error',
 		'no-label-var': 'error',
@@ -138,7 +138,7 @@ module.exports = {
 		'no-undefined': 'error',
 		'no-unused-vars': 'error',
 		'no-use-before-define': 'error',
-		'callback-return': 'error', // eslint-disable-line sort-keys
+		'callback-return': 'error',
 		'global-require': 'error',
 		'global-require': 'error',
 		'handle-callback-err': 'error',
@@ -148,7 +148,7 @@ module.exports = {
 		'no-restricted-modules': [ 'error', {
 			patterns: [ 'lodash/*', 'lodash', 'request' ]
 		}],
-		'array-bracket-spacing': [ 'error', 'always', { // eslint-disable-line sort-keys
+		'array-bracket-spacing': [ 'error', 'always', {
 			arraysInArrays: false,
 			objectsInArrays: false
 		}],
@@ -240,7 +240,6 @@ module.exports = {
 			before: false
 		}],
 		'semi-style': [ 'error', 'last' ],
-		'sort-keys': [ 'error', 'asc' ],
 		'space-before-blocks': 'error',
 		'space-before-function-paren': [ 'error', {
 			anonymous: 'never',
@@ -252,7 +251,7 @@ module.exports = {
 		'switch-colon-spacing': 'error',
 		'template-tag-spacing': 'error',
 		'wrap-regex': 'error',
-		'arrow-spacing': [ 'error', { // eslint-disable-line sort-keys
+		'arrow-spacing': [ 'error', {
 			after: true,
 			before: true
 		}],
