@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-luanmuniz",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Just the eslint configuration for all the startup boilerplate projects",
   "main": "index.js",
   "scripts": {
