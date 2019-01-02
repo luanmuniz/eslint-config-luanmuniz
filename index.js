@@ -31,7 +31,7 @@ module.exports = {
 		'jest/prefer-to-have-length': 'error',
 		'jest/valid-expect': 'error',
 
-		'no-magic-numbers': [ 'error', { 'ignore': [ -1, 0, 1, 2, 3, 4, 5, 7, 10, 24, 60, 100, 200, 365, 400, 404, 1000, 1024 ] }],
+		'no-magic-numbers': [ 'error', { 'ignore': [ -1, 0, 1, 2, 3, 4, 5, 7, 10, 24, 60, 100, 200, 365, 400, 401, 403, 404, 500, 1000, 1024 ] }],
 
 		'for-direction': 'error',
 		'no-compare-neg-zero': 'error',
