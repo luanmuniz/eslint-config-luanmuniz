@@ -1,8 +1,6 @@
 const eslint = require('eslint');
 const config = require('../index.js');
 
-require('jest-extended');
-
 test('test basic properties of config', () => {
 	expect(config.parserOptions).toBeObject();
 	expect(config.env).toBeObject();
@@ -10,13 +8,18 @@ test('test basic properties of config', () => {
 	expect(config.rules).toBeObject();
 });
 
-test('load config in eslint to validate all rule syntax is correct', () => {
-	const CLIEngine = eslint.CLIEngine;
+test('load config in eslint to validate all rule syntax is correct', async() => {
+	const ESLint = eslint.ESLint;
 
-	const cli = new CLIEngine({
-		configFile: 'index.js',
+	const cli = new ESLint({
+		overrideConfigFile: 'index.js',
 		useEslintrc: false
 	});
 
-	expect(cli.executeOnFiles([ 'index.js' ]).errorCount).toBe(0);
+	const lintResult = await cli.lintFiles([ 'index.js' ]);
+	expect(lintResult[0].errorCount).toBe(0);
+	expect(lintResult[0].fatalErrorCount).toBe(0);
+	expect(lintResult[0].warningCount).toBe(0);
+	expect(lintResult[0].fixableErrorCount).toBe(0);
+	expect(lintResult[0].fixableWarningCount).toBe(0);
 });

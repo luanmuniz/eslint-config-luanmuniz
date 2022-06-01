@@ -4,7 +4,7 @@
   "notify": true,
   "notifyMode": "always",
   "testMatch": [ "**/test/**/*.js", "**/__tests__/**/*.js?", "**/?(*.)+(spec|test).js?" ],
-  "setupTestFrameworkScriptFile": "jest-extended",
+  "setupFilesAfterEnv": [ "jest-extended/all" ],
   "collectCoverageFrom": [
     "**/*.{js,jsx}",
     "!**/node_modules/**",
