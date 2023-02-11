@@ -2,6 +2,7 @@ module.exports = {
 	env: {
 		browser: true,
 		jest: true,
+		'jest/globals': true,
 		node: true,
 		serviceworker: true,
 		webextensions: true
@@ -24,7 +25,6 @@ module.exports = {
 		'jest/no-focused-tests': 'error',
 		'jest/no-identical-title': 'error',
 		'jest/no-jasmine-globals': 'error',
-		'jest/no-jest-import': 'error',
 		'jest/no-test-prefixes': 'error',
 		'jest/prefer-to-have-length': 'error',
 		'jest/valid-expect': 'error',
