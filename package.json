@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-luanmuniz",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "description": "Just the eslint configuration for all the startup boilerplate projects",
   "main": "index.js",
   "type": "module",
@@ -29,6 +29,6 @@
     "node-notifier": "10.0.1"
   },
   "peerDependencies": {
-		"eslint": ">= 9"
-	}
+    "eslint": ">= 9"
+  }
 }
