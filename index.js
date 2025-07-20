@@ -1,25 +1,28 @@
-module.exports = {
-	env: {
-		browser: true,
-		jest: true,
-		'jest/globals': true,
-		node: true,
-		serviceworker: true,
-		webextensions: true
-	},
-	globals: {
-		Promise: true
-	},
-	parserOptions: {
-		ecmaFeatures: {
-			impliedStrict: true,
-			jsx: true
-		},
+import jestPlugin from 'eslint-plugin-jest';
+import globals from 'globals';
+
+export default {
+	languageOptions: {
 		ecmaVersion: 2018,
-		sourceType: 'module'
+		sourceType: 'module',
+		globals: {
+			...globals.browser,
+			...globals.node,
+			Promise: true,
+			require: true,
+			test: true,
+			expect: true
+		},
+		parserOptions: {
+			ecmaFeatures: {
+				impliedStrict: true,
+				jsx: true
+			}
+		}
 	},
-	plugins: [ 'jest' ],
-	root: true,
+	plugins: {
+		jest: jestPlugin
+	},
 	rules: {
 		'jest/no-disabled-tests': 'error',
 		'jest/no-focused-tests': 'error',
@@ -60,7 +63,6 @@ module.exports = {
 		'no-unreachable': 'error',
 		'no-unsafe-negation': 'error',
 		'use-isnan': 'error',
-		'valid-jsdoc': [ 'error', { requireReturn: false }],
 		'valid-typeof': 'error',
 
 		'array-callback-return': 'error',
@@ -226,11 +228,6 @@ module.exports = {
 		'quotes': [ 'error', 'single', {
 			allowTemplateLiterals: true,
 			avoidEscape: true
-		}],
-		'require-jsdoc': [ 'error', {
-			require: {
-				ArrowFunctionExpression: false
-			}
 		}],
 		'semi': [ 'error', 'always' ],
 		'semi-spacing': [ 'error', {
